@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>社会貢献 / 公益支持 / Please Support — Hikari no Shima</title>
+  <meta name="description" content="放射線治療・医用画像の総合ソリューション / 肿瘤放疗与医学影像的一体化解决方案 / Integrated Solutions for Radiotherapy & Diagnostic Imaging">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { brand: '#1f6feb', accent: '#00b3a4' } } } };
+  </script>
+  <style>
+    .lang-ja { display: inline; }
+    .lang-zh, .lang-en { display: none; }
+    html[lang='zh'] .lang-zh { display: inline; }
+    html[lang='zh'] .lang-ja, html[lang='zh'] .lang-en { display: none; }
+    html[lang='en'] .lang-en { display: inline; }
+    html[lang='en'] .lang-ja, html[lang='en'] .lang-zh { display: none; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-gradient-to-tr from-blue-600 to-emerald-500 grid place-items-center text-white font-bold shadow">Hi</div>
+          <div class="leading-4">
+            <div class="font-semibold">Hikari no Shima</div>
+            <div class="text-xs text-slate-500">
+              <span class="lang-ja">放射線治療・医用画像の総合ソリューション</span>
+              <span class="lang-zh">肿瘤放疗与医学影像的一体化解决方案</span>
+              <span class="lang-en">Integrated Solutions for Radiotherapy & Diagnostic Imaging</span>
+            </div>
+          </div>
+        </a>
+        <nav class="hidden md:flex items-center space-x-1">
+        <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:text-blue-600">
+          <span class="lang-ja">ホーム</span>
+          <span class="lang-zh">首页</span>
+          <span class="lang-en">Home</span>
+        </a>
+
+        <a href="inventory.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:text-blue-600">
+          <span class="lang-ja">在庫</span>
+          <span class="lang-zh">在库</span>
+          <span class="lang-en">Inventory</span>
+        </a>
+
+        <a href="parts.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:text-blue-600">
+          <span class="lang-ja">部品/パーツ</span>
+          <span class="lang-zh">部件/配件</span>
+          <span class="lang-en">Parts</span>
+        </a>
+
+        <a href="services.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:text-blue-600">
+          <span class="lang-ja">サービス</span>
+          <span class="lang-zh">服务</span>
+          <span class="lang-en">Services</span>
+        </a>
+
+        <a href="resources.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:text-blue-600">
+          <span class="lang-ja">リソース</span>
+          <span class="lang-zh">资料中心</span>
+          <span class="lang-en">Resources</span>
+        </a>
+
+        <a href="about.html" class="px-3 py-2 rounded-md text-sm font-medium text-white bg-blue-600">
+          <span class="lang-ja">会社情報</span>
+          <span class="lang-zh">关于我们</span>
+          <span class="lang-en">About</span>
+        </a>
+
+        <a href="contact.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:text-blue-600">
+          <span class="lang-ja">お問い合わせ</span>
+          <span class="lang-zh">联系/询价</span>
+          <span class="lang-en">Contact</span>
+        </a></nav>
+        <div class="hidden md:flex items-center gap-2">
+          <a href="contact.html" class="items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-full shadow hover:bg-blue-700 text-sm font-semibold hidden md:inline-flex">
+            <span class="lang-ja">見積依頼</span><span class="lang-zh">获取报价</span><span class="lang-en">Get a Quote</span>
+          </a>
+          <div class="inline-flex rounded-full border border-slate-300 overflow-hidden">
+            <button id="btn-ja" class="px-3 py-2 text-sm bg-white hover:bg-slate-100">日</button>
+            <button id="btn-zh" class="px-3 py-2 text-sm bg-white hover:bg-slate-100">中</button>
+            <button id="btn-en" class="px-3 py-2 text-sm bg-white hover:bg-slate-100">EN</button>
+          </div>
+        </div>
+        <button class="md:hidden inline-flex items-center px-3 py-2 border rounded text-slate-700" onclick="document.getElementById('mnav').classList.toggle('hidden')">
+          <span class="lang-ja">メニュー</span><span class="lang-zh">菜单</span><span class="lang-en">Menu</span>
+        </button>
+      </div>
+      <div id="mnav" class="md:hidden hidden pb-3 space-y-1">
+        <a class='block px-3 py-2 text-slate-700 hover:bg-slate-100 rounded' href='index.html'><span class='lang-ja'>ホーム</span><span class='lang-zh'>首页</span><span class='lang-en'>Home</span></a><a class='block px-3 py-2 text-slate-700 hover:bg-slate-100 rounded' href='inventory.html'><span class='lang-ja'>在庫</span><span class='lang-zh'>在库</span><span class='lang-en'>Inventory</span></a><a class='block px-3 py-2 text-slate-700 hover:bg-slate-100 rounded' href='parts.html'><span class='lang-ja'>部品/パーツ</span><span class='lang-zh'>部件/配件</span><span class='lang-en'>Parts</span></a><a class='block px-3 py-2 text-slate-700 hover:bg-slate-100 rounded' href='services.html'><span class='lang-ja'>サービス</span><span class='lang-zh'>服务</span><span class='lang-en'>Services</span></a><a class='block px-3 py-2 text-slate-700 hover:bg-slate-100 rounded' href='resources.html'><span class='lang-ja'>リソース</span><span class='lang-zh'>资料中心</span><span class='lang-en'>Resources</span></a><a class='block px-3 py-2 text-slate-700 hover:bg-slate-100 rounded' href='about.html'><span class='lang-ja'>会社情報</span><span class='lang-zh'>关于我们</span><span class='lang-en'>About</span></a><a class='block px-3 py-2 text-slate-700 hover:bg-slate-100 rounded' href='contact.html'><span class='lang-ja'>お問い合わせ</span><span class='lang-zh'>联系/询价</span><span class='lang-en'>Contact</span></a>
+        <div class="flex gap-2 px-3">
+          <button id="mbtn-ja" class="px-3 py-2 border rounded">日</button>
+          <button id="mbtn-zh" class="px-3 py-2 border rounded">中</button>
+          <button id="mbtn-en" class="px-3 py-2 border rounded">EN</button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+<section class="bg-gradient-to-b from-white to-slate-100">
+  <div class="max-w-7xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-8 items-center">
+    <div>
+      <span class="inline-flex items-center gap-2 text-blue-700 bg-blue-50 px-3 py-1 rounded-full text-xs font-semibold">
+        <span class="lang-ja">信頼できるグローバルパートナー</span>
+        <span class="lang-zh">值得信赖的全球合作伙伴</span>
+        <span class="lang-en">Trusted Global Partner</span>
+      </span>
+      <h1 class="mt-3 text-3xl md:text-4xl font-bold text-slate-900">
+        <span class="lang-ja">社会貢献</span>
+        <span class="lang-zh">公益支持</span>
+        <span class="lang-en">Please Support</span>
+      </h1>
+      <p class="mt-3 text-slate-600">
+        <span class="lang-ja">医療アクセスとコミュニティ健康の取り組みを支援。</span>
+        <span class="lang-zh">关注医疗可及与社区健康项目。</span>
+        <span class="lang-en">Support patient access and community health.</span>
+      </p>
+      <div class="mt-6 flex gap-3">
+        <a href="contact.html" class="inline-flex items-center gap-2 bg-blue-600 text-white px-5 py-2.5 rounded-full shadow hover:bg-blue-700">
+          <span class="lang-ja">見積依頼</span><span class="lang-zh">获取报价</span><span class="lang-en">Request a Quote</span>
+        </a>
+        <a href="inventory.html" class="inline-flex items-center gap-2 border border-blue-600 text-blue-700 px-5 py-2.5 rounded-full hover:bg-blue-50">
+          <span class="lang-ja">在庫を見る</span><span class="lang-zh">浏览在库</span><span class="lang-en">Browse Inventory</span>
+        </a>
+      </div>
+    </div>
+    <div class="rounded-xl overflow-hidden shadow border border-slate-200">
+      <img src="https://placehold.co/1200x800?text=Treatment+Room" alt="Treatment room">
+    </div>
+  </div>
+</section></main>
+  <footer class="bg-slate-900 text-slate-300 mt-20">
+    <div class="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-4 gap-8">
+      <div>
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-gradient-to-tr from-blue-600 to-emerald-500 grid place-items-center text-white font-bold">Hi</div>
+          <div>
+            <div class="font-semibold text-white">Hikari no Shima</div>
+            <div class="text-xs text-slate-400">
+              <span class="lang-ja">放射線治療・医用画像の総合ソリューション</span>
+              <span class="lang-zh">肿瘤放疗与医学影像的一体化解决方案</span>
+              <span class="lang-en">Integrated Solutions for Radiotherapy & Diagnostic Imaging</span>
+            </div>
+          </div>
+        </div>
+        <p class="text-sm text-slate-400 mt-4">© 2025 Hikari no Shima Co., Ltd. All rights reserved.</p>
+      </div>
+      <div>
+        <div class="font-semibold text-white"><span class="lang-ja">会社</span><span class="lang-zh">公司</span><span class="lang-en">Company</span></div>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a href="about.html" class="hover:text-white"><span class="lang-ja">会社情報</span><span class="lang-zh">关于我们</span><span class="lang-en">About</span></a></li>
+          <li><a href="services.html" class="hover:text-white"><span class="lang-ja">サービス</span><span class="lang-zh">服务</span><span class="lang-en">Services</span></a></li>
+          <li><a href="inventory.html" class="hover:text-white"><span class="lang-ja">在庫</span><span class="lang-zh">在库</span><span class="lang-en">Inventory</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-semibold text-white"><span class="lang-ja">連絡先</span><span class="lang-zh">联系</span><span class="lang-en">Contact</span></div>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li>Fujisawa, Kanagawa, Japan</li>
+          <li><a href="mailto:info@example.com" class="hover:text-white">info@example.com</a></li>
+          <li>+81 (0)90-0000-0000</li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-semibold text-white">Legal</div>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a class="hover:text-white" href="#">Terms</a></li>
+          <li><a class="hover:text-white" href="#">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 py-4 text-xs text-slate-400">
+        <span class="lang-ja">日本で心を込めて制作</span>
+        <span class="lang-zh">日本用心制作</span>
+        <span class="lang-en">Made with ♥ in Japan</span>
+      </div>
+    </div>
+  </footer>
+  <script>
+    function setLang(l) {
+      document.documentElement.setAttribute('lang', l);
+      try { localStorage.setItem('lang', l); } catch(e){}
+    }
+    document.getElementById('btn-ja')?.addEventListener('click',()=>setLang('ja'));
+    document.getElementById('btn-zh')?.addEventListener('click',()=>setLang('zh'));
+    document.getElementById('btn-en')?.addEventListener('click',()=>setLang('en'));
+    document.getElementById('mbtn-ja')?.addEventListener('click',()=>setLang('ja'));
+    document.getElementById('mbtn-zh')?.addEventListener('click',()=>setLang('zh'));
+    document.getElementById('mbtn-en')?.addEventListener('click',()=>setLang('en'));
+    (function(){
+      var l = 'ja';
+      try { l = localStorage.getItem('lang')||'ja'; } catch(e){}
+      setLang(l);
+    })();
+  </script>
+</body>
+</html>
