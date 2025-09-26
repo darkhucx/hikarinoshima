@@ -1,222 +1,54 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>会社情報 / 关于我们 / About — Hikari no Shima</title>
-  <meta name="description" content="放射線治療・医用画像の総合ソリューション / 肿瘤放疗与医学影像的一体化解决方案 / Integrated Solutions for Radiotherapy & Diagnostic Imaging">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = { theme: { extend: { colors: { brand: '#1f6feb', accent: '#00b3a4' } } } };
-  </script>
-  <style>
-    .lang-ja { display: inline; }
-    .lang-zh, .lang-en { display: none; }
-    html[lang='zh'] .lang-zh { display: inline; }
-    html[lang='zh'] .lang-ja, html[lang='zh'] .lang-en { display: none; }
-    html[lang='en'] .lang-en { display: inline; }
-    html[lang='en'] .lang-ja, html[lang='en'] .lang-zh { display: none; }
-  </style>
-</head>
-<body class="bg-slate-50 text-slate-900">
-  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="flex items-center justify-between h-16">
-        <a href="index.html" class="flex items-center gap-3">
-          <div class="w-9 h-9 rounded-lg bg-gradient-to-tr from-blue-600 to-emerald-500 grid place-items-center text-white font-bold shadow">Hi</div>
-          <div class="leading-4">
-            <div class="font-semibold">Hikari no Shima</div>
-            <div class="text-xs text-slate-500">
-              <span class="lang-ja">放射線治療・医用画像の総合ソリューション</span>
-              <span class="lang-zh">肿瘤放疗与医学影像的一体化解决方案</span>
-              <span class="lang-en">Integrated Solutions for Radiotherapy & Diagnostic Imaging</span>
-            </div>
-          </div>
-        </a>
-        <nav class="hidden md:flex items-center space-x-1">
-        <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:text-blue-600">
-          <span class="lang-ja">ホーム</span>
-          <span class="lang-zh">首页</span>
-          <span class="lang-en">Home</span>
-        </a>
+---
+layout: default
+title: About
+permalink: /about.html
+---
 
-        <a href="inventory.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:text-blue-600">
-          <span class="lang-ja">在庫</span>
-          <span class="lang-zh">在库</span>
-          <span class="lang-en">Inventory</span>
-        </a>
-
-        <a href="parts.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:text-blue-600">
-          <span class="lang-ja">部品/パーツ</span>
-          <span class="lang-zh">部件/配件</span>
-          <span class="lang-en">Parts</span>
-        </a>
-
-        <a href="services.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:text-blue-600">
-          <span class="lang-ja">サービス</span>
-          <span class="lang-zh">服务</span>
-          <span class="lang-en">Services</span>
-        </a>
-
-        <a href="resources.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:text-blue-600">
-          <span class="lang-ja">リソース</span>
-          <span class="lang-zh">资料中心</span>
-          <span class="lang-en">Resources</span>
-        </a>
-
-        <a href="about.html" class="px-3 py-2 rounded-md text-sm font-medium text-white bg-blue-600">
-          <span class="lang-ja">会社情報</span>
-          <span class="lang-zh">关于我们</span>
-          <span class="lang-en">About</span>
-        </a>
-
-        <a href="contact.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:text-blue-600">
-          <span class="lang-ja">お問い合わせ</span>
-          <span class="lang-zh">联系/询价</span>
-          <span class="lang-en">Contact</span>
-        </a></nav>
-        <div class="hidden md:flex items-center gap-2">
-          <a href="contact.html" class="items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-full shadow hover:bg-blue-700 text-sm font-semibold hidden md:inline-flex">
-            <span class="lang-ja">見積依頼</span><span class="lang-zh">获取报价</span><span class="lang-en">Get a Quote</span>
-          </a>
-          <div class="inline-flex rounded-full border border-slate-300 overflow-hidden">
-            <button id="btn-ja" class="px-3 py-2 text-sm bg-white hover:bg-slate-100">日</button>
-            <button id="btn-zh" class="px-3 py-2 text-sm bg-white hover:bg-slate-100">中</button>
-            <button id="btn-en" class="px-3 py-2 text-sm bg-white hover:bg-slate-100">EN</button>
-          </div>
-        </div>
-        <button class="md:hidden inline-flex items-center px-3 py-2 border rounded text-slate-700" onclick="document.getElementById('mnav').classList.toggle('hidden')">
-          <span class="lang-ja">メニュー</span><span class="lang-zh">菜单</span><span class="lang-en">Menu</span>
-        </button>
-      </div>
-      <div id="mnav" class="md:hidden hidden pb-3 space-y-1">
-        <a class='block px-3 py-2 text-slate-700 hover:bg-slate-100 rounded' href='index.html'><span class='lang-ja'>ホーム</span><span class='lang-zh'>首页</span><span class='lang-en'>Home</span></a><a class='block px-3 py-2 text-slate-700 hover:bg-slate-100 rounded' href='inventory.html'><span class='lang-ja'>在庫</span><span class='lang-zh'>在库</span><span class='lang-en'>Inventory</span></a><a class='block px-3 py-2 text-slate-700 hover:bg-slate-100 rounded' href='parts.html'><span class='lang-ja'>部品/パーツ</span><span class='lang-zh'>部件/配件</span><span class='lang-en'>Parts</span></a><a class='block px-3 py-2 text-slate-700 hover:bg-slate-100 rounded' href='services.html'><span class='lang-ja'>サービス</span><span class='lang-zh'>服务</span><span class='lang-en'>Services</span></a><a class='block px-3 py-2 text-slate-700 hover:bg-slate-100 rounded' href='resources.html'><span class='lang-ja'>リソース</span><span class='lang-zh'>资料中心</span><span class='lang-en'>Resources</span></a><a class='block px-3 py-2 text-slate-700 hover:bg-slate-100 rounded' href='about.html'><span class='lang-ja'>会社情報</span><span class='lang-zh'>关于我们</span><span class='lang-en'>About</span></a><a class='block px-3 py-2 text-slate-700 hover:bg-slate-100 rounded' href='contact.html'><span class='lang-ja'>お問い合わせ</span><span class='lang-zh'>联系/询价</span><span class='lang-en'>Contact</span></a>
-        <div class="flex gap-2 px-3">
-          <button id="mbtn-ja" class="px-3 py-2 border rounded">日</button>
-          <button id="mbtn-zh" class="px-3 py-2 border rounded">中</button>
-          <button id="mbtn-en" class="px-3 py-2 border rounded">EN</button>
-        </div>
-      </div>
-    </div>
-  </header>
-  <main>
 <section class="bg-gradient-to-b from-white to-slate-100">
   <div class="max-w-7xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-8 items-center">
     <div>
       <span class="inline-flex items-center gap-2 text-blue-700 bg-blue-50 px-3 py-1 rounded-full text-xs font-semibold">
-        <span class="lang-ja">信頼できるグローバルパートナー</span>
-        <span class="lang-zh">值得信赖的全球合作伙伴</span>
-        <span class="lang-en">Trusted Global Partner</span>
+        <span class="lang-ja">会社紹介</span><span class="lang-zh">公司简介</span><span class="lang-en">About</span>
       </span>
       <h1 class="mt-3 text-3xl md:text-4xl font-bold text-slate-900">
-        <span class="lang-ja">会社情報</span>
-        <span class="lang-zh">关于我们</span>
-        <span class="lang-en">About Us</span>
+        <span class="lang-ja">会社情報</span><span class="lang-zh">关于我们</span><span class="lang-en">About Us</span>
       </h1>
-      <p class="mt-3 text-slate-600">
-        <span class="lang-ja">神奈川県藤沢市を拠点に、放射線治療・医用画像機器の国際流通と導入を支援。</span>
-        <span class="lang-zh">总部位于日本神奈川藤泽，专注于放疗与影像设备的跨国流通与工程交付。</span>
-        <span class="lang-en">Japan‑based team enabling cross‑border trade and turnkey delivery for RT & Imaging.</span>
-      </p>
+      <p class="mt-3 text-slate-600"><span class="lang-ja">中国の医療機器保守市場を支援</span><span class="lang-zh">服务中国医疗设备维保市场</span><span class="lang-en">Serving China’s maintenance market</span></p>
       <div class="mt-6 flex gap-3">
-        <a href="contact.html" class="inline-flex items-center gap-2 bg-blue-600 text-white px-5 py-2.5 rounded-full shadow hover:bg-blue-700">
+        <a href="{ '/contact.html' | relative_url }" class="inline-flex items-center gap-2 bg-blue-600 text-white px-5 py-2.5 rounded-full shadow hover:bg-blue-700">
           <span class="lang-ja">見積依頼</span><span class="lang-zh">获取报价</span><span class="lang-en">Request a Quote</span>
         </a>
-        <a href="inventory.html" class="inline-flex items-center gap-2 border border-blue-600 text-blue-700 px-5 py-2.5 rounded-full hover:bg-blue-50">
+        <a href="{ '/inventory.html' | relative_url }" class="inline-flex items-center gap-2 border border-blue-600 text-blue-700 px-5 py-2.5 rounded-full hover:bg-blue-50">
           <span class="lang-ja">在庫を見る</span><span class="lang-zh">浏览在库</span><span class="lang-en">Browse Inventory</span>
         </a>
       </div>
     </div>
     <div class="rounded-xl overflow-hidden shadow border border-slate-200">
-      <img src="https://placehold.co/1200x800?text=Treatment+Room" alt="Treatment room">
+      <img src="https://placehold.co/1200x800?text=About" alt="About">
     </div>
   </div>
 </section>
-<section class="py-10">
-  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-4">
-    <div class="p-5 bg-white border rounded-xl">
-      <div class="text-2xl font-bold">JP</div>
-      <div class="text-sm text-slate-600"><span class="lang-ja">国内連携ネットワーク</span><span class="lang-zh">日本覆盖与伙伴网络</span><span class="lang-en">Japan network</span></div>
-    </div>
-    <div class="p-5 bg-white border rounded-xl">
-      <div class="text-2xl font-bold">Global</div>
-      <div class="text-sm text-slate-600"><span class="lang-ja">多地域の工学・物流能力</span><span class="lang-zh">多地区工程与物流能力</span><span class="lang-en">Multi‑region logistics</span></div>
-    </div>
-    <div class="p-5 bg-white border rounded-xl">
-      <div class="text-2xl font-bold">QA</div>
-      <div class="text-sm text-slate-600"><span class="lang-ja">ドキュメント化・品質管理</span><span class="lang-zh">文件化与质量管理</span><span class="lang-en">Documentation & QA</span></div>
-    </div>
-    <div class="p-5 bg-white border rounded-xl">
-      <div class="text-2xl font-bold">JA/EN/ZH</div>
-      <div class="text-sm text-slate-600"><span class="lang-ja">三言語コミュニケーション</span><span class="lang-zh">三语沟通</span><span class="lang-en">Trilingual communication</span></div>
-    </div>
+
+<section class="max-w-7xl mx-auto px-4 py-10">
+  <div class="bg-white border border-slate-200 rounded-xl p-6 prose max-w-none">
+    <div class="lang-zh"><p><strong>光の島 Hikari no Shima</strong> 面向中国医疗设备维保市场，专注于<strong>肿瘤放疗与医学影像设备的配件与一体化解决方案</strong>。覆盖 LINAC、CT-Sim、HDR、TPS 以及 CT、MRI、Angio、PET/CT 等设备，我们不仅为中国客户提供<strong>配件/升级/周边</strong>，还可协助客户<strong>评估、拆机、包装、国际物流、配件再安装、远程应用/用户培训</strong>，实现<strong>配件全流程交付</strong>。</p>
+<p>我们与中国经销商、独立服务商（ISO）及 OEM 合作，致力于<strong>保证客户设备停机时间最小化</strong>、<strong>总体成本优化</strong>与<strong>供应商中立选型</strong>，并与<strong>欧美、日本多国配件运营商</strong>协同，为中国客户带来<strong>稳定可靠的配件实施与交付</strong>。</p></div>
+    <div class="lang-ja"><p><strong>光の島（Hikari no Shima）</strong> は、中国の医療機器保守市場に向けて、<strong>腫瘍放射線治療および診断用画像機器の部品と一体型（エンドツーエンド）ソリューション</strong>を提供しています。LINAC・CT-Sim・HDR・TPS に加え、CT・MRI・Angio・PET/CT までを対象に、中国のお客様へ<strong>部品／アップグレード／周辺機器</strong>を提供するだけでなく、<strong>査定、撤去、梱包、国際物流、部品の再設置、遠隔でのアプリケーション／ユーザートレーニング</strong>まで支援し、<strong>部品の全工程でのデリバリー</strong>を実現します。</p>
+<p>私たちは<strong>中国のディストリビューター</strong>、<strong>独立系サービス事業者（ISO）</strong>、<strong>OEM</strong> と連携し、<strong>装置のダウンタイム最小化</strong>、<strong>TCO（総保有コスト）の最適化</strong>、<strong>ベンダーニュートラルな選定</strong>に取り組むとともに、<strong>欧米および日本の複数の部品オペレーター</strong>と協業し、中国のお客様に<strong>安定的で信頼できる部品の実装とデリバリー</strong>を提供します。</p></div>
+    <div class="lang-en"><p><strong>Hikari no Shima</strong> serves China’s medical equipment maintenance market, specializing in <strong>parts and end-to-end solutions for radiation oncology and diagnostic imaging systems</strong>. Covering LINAC, CT-Sim, HDR, TPS, as well as CT, MRI, Angio, and PET/CT, we not only provide <strong>parts/upgrades/peripherals</strong> for customers in China, but also assist with <strong>appraisals, de-installation, crating, international logistics, re-installation of parts, and remote applications/user training</strong>, achieving <strong>end-to-end parts delivery</strong>.</p>
+<p>We collaborate with <strong>distributors in China</strong>, <strong>independent service organizations (ISOs)</strong>, and <strong>OEMs</strong>, committed to <strong>minimizing equipment downtime</strong>, <strong>optimizing total cost (TCO)</strong>, and <strong>vendor-neutral selection</strong>; together with <strong>parts operators across Europe, the United States, and Japan</strong>, we deliver <strong>stable and reliable parts implementation and delivery</strong> for customers in China.</p></div>
+    <h2 class="text-xl font-semibold mt-6"><span class="lang-zh">核心服务</span><span class="lang-ja">コアサービス</span><span class="lang-en">Key Services</span></h2>
+    <ul class="mt-2 list-disc pl-6 text-slate-700">
+      <li><span class="lang-zh">配件与耗材供应（如：磁控管/速调管、球管、MLC 控制板、RF 放大器、冷头、探测器等）</span><span class="lang-ja">部品・消耗品の供給（例：マグネトロン／クライストロン、X 線管、MLC コントローラ基板、RF アンプ、コールドヘッド、検出器 など）</span><span class="lang-en">Supply of parts and consumables (e.g., magnetrons/klystrons, X-ray tubes, MLC controller boards, RF amplifiers, cold heads, detectors, etc.)</span></li>
+      <li><span class="lang-zh">升级与延寿整备、中国医疗设备迁移/拆除/合规处置</span><span class="lang-ja">アップグレードおよび延命整備、中国における医療機器の移設／撤去／適正処分</span><span class="lang-en">Upgrades and life-extension refurbishment; relocation/removal/compliant disposal of medical equipment in China</span></li>
+      <li><span class="lang-zh">物流与通关、安装协调、验收测试支持</span><span class="lang-ja">物流・通関、設置コーディネート、受入試験支援</span><span class="lang-en">Logistics and customs clearance, installation coordination, acceptance testing support</span></li>
+      <li><span class="lang-zh">评估与报价、技术咨询、远程设备应用/用户培训</span><span class="lang-ja">査定・見積、技術コンサルティング、遠隔での機器アプリケーション／ユーザートレーニング</span><span class="lang-en">Appraisals and quotations, technical consulting, remote equipment applications/user training</span></li>
+    </ul>
+    <h2 class="text-xl font-semibold mt-6"><span class="lang-zh">覆盖机种</span><span class="lang-ja">対応モダリティ</span><span class="lang-en">Modalities Covered</span></h2>
+    <p class="text-slate-700">LINAC／CT-Sim／HDR／TPS／CT／MRI／Angio／PET-CT</p>
+    <h2 class="text-xl font-semibold mt-6"><span class="lang-zh">质量与合规</span><span class="lang-ja">品質・コンプライアンス</span><span class="lang-en">Quality & Compliance</span></h2>
+    <p class="text-slate-700"><span class="lang-zh">项目全程<strong>留痕与文档化</strong>，重视<strong>检验与追溯</strong>，遵循相关<strong>进出口与安全规范</strong>及医院制度。</span><span class="lang-ja">プロジェクト全体での<strong>記録保持と文書化</strong>を徹底し、<strong>検品・トレーサビリティ</strong>を重視。関連する<strong>輸出入および安全に関する法令</strong>、ならびに医療機関の規程を遵守します。</span><span class="lang-en">We maintain <strong>full lifecycle record-keeping and documentation</strong>, emphasize <strong>inspection and traceability</strong>, and comply with relevant <strong>import/export and safety regulations</strong> as well as hospital policies.</span></p>
+    <h2 class="text-xl font-semibold mt-6"><span class="lang-zh">基地与区域</span><span class="lang-ja">拠点・対応エリア</span><span class="lang-en">Base & Coverage</span></h2>
+    <p class="text-slate-700"><span class="lang-zh">总部日本（神奈川），服务中国及亚洲合作网络。</span><span class="lang-ja">日本（神奈川）に本社を置き、中国およびアジアのパートナーネットワークに対応しています。</span><span class="lang-en">Headquartered in Japan (Kanagawa), serving China and an Asia-wide partner network.</span></p>
   </div>
 </section>
-</main>
-  <footer class="bg-slate-900 text-slate-300 mt-20">
-    <div class="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-4 gap-8">
-      <div>
-        <div class="flex items-center gap-3">
-          <div class="w-9 h-9 rounded-lg bg-gradient-to-tr from-blue-600 to-emerald-500 grid place-items-center text-white font-bold">Hi</div>
-          <div>
-            <div class="font-semibold text-white">Hikari no Shima</div>
-            <div class="text-xs text-slate-400">
-              <span class="lang-ja">放射線治療・医用画像の総合ソリューション</span>
-              <span class="lang-zh">肿瘤放疗与医学影像的一体化解决方案</span>
-              <span class="lang-en">Integrated Solutions for Radiotherapy & Diagnostic Imaging</span>
-            </div>
-          </div>
-        </div>
-        <p class="text-sm text-slate-400 mt-4">© 2025 Hikari no Shima Co., Ltd. All rights reserved.</p>
-      </div>
-      <div>
-        <div class="font-semibold text-white"><span class="lang-ja">会社</span><span class="lang-zh">公司</span><span class="lang-en">Company</span></div>
-        <ul class="mt-3 space-y-2 text-sm">
-          <li><a href="about.html" class="hover:text-white"><span class="lang-ja">会社情報</span><span class="lang-zh">关于我们</span><span class="lang-en">About</span></a></li>
-          <li><a href="services.html" class="hover:text-white"><span class="lang-ja">サービス</span><span class="lang-zh">服务</span><span class="lang-en">Services</span></a></li>
-          <li><a href="inventory.html" class="hover:text-white"><span class="lang-ja">在庫</span><span class="lang-zh">在库</span><span class="lang-en">Inventory</span></a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="font-semibold text-white"><span class="lang-ja">連絡先</span><span class="lang-zh">联系</span><span class="lang-en">Contact</span></div>
-        <ul class="mt-3 space-y-2 text-sm">
-          <li>Fujisawa, Kanagawa, Japan</li>
-          <li><a href="mailto:info@example.com" class="hover:text-white">info@example.com</a></li>
-          <li>+81 (0)90-0000-0000</li>
-        </ul>
-      </div>
-      <div>
-        <div class="font-semibold text-white">Legal</div>
-        <ul class="mt-3 space-y-2 text-sm">
-          <li><a class="hover:text-white" href="#">Terms</a></li>
-          <li><a class="hover:text-white" href="#">Privacy</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="border-t border-slate-800">
-      <div class="max-w-7xl mx-auto px-4 py-4 text-xs text-slate-400">
-        <span class="lang-ja">日本で心を込めて制作</span>
-        <span class="lang-zh">日本用心制作</span>
-        <span class="lang-en">Made with ♥ in Japan</span>
-      </div>
-    </div>
-  </footer>
-  <script>
-    function setLang(l) {
-      document.documentElement.setAttribute('lang', l);
-      try { localStorage.setItem('lang', l); } catch(e){}
-    }
-    document.getElementById('btn-ja')?.addEventListener('click',()=>setLang('ja'));
-    document.getElementById('btn-zh')?.addEventListener('click',()=>setLang('zh'));
-    document.getElementById('btn-en')?.addEventListener('click',()=>setLang('en'));
-    document.getElementById('mbtn-ja')?.addEventListener('click',()=>setLang('ja'));
-    document.getElementById('mbtn-zh')?.addEventListener('click',()=>setLang('zh'));
-    document.getElementById('mbtn-en')?.addEventListener('click',()=>setLang('en'));
-    (function(){
-      var l = 'ja';
-      try { l = localStorage.getItem('lang')||'ja'; } catch(e){}
-      setLang(l);
-    })();
-  </script>
-</body>
-</html>

@@ -1,2 +1,0 @@
-# hikarinoshima
-hikarinoshima website

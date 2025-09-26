@@ -1,0 +1,65 @@
+<header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex items-center justify-between h-16">
+      <a href="{{ '/' | relative_url }}" class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-lg bg-gradient-to-tr from-blue-600 to-emerald-500 grid place-items-center text-white font-bold shadow">Hi</div>
+        <div class="leading-4">
+          <div class="font-semibold">光の島 Hikari no Shima</div>
+          <div class="text-xs text-slate-500">
+            <span class="lang-ja">腫瘍放射線治療・診断用画像の部品＆一体型ソリューション</span>
+            <span class="lang-zh">肿瘤放疗与医学影像配件与一体化方案</span>
+            <span class="lang-en">Parts & turnkey solutions for RT & Imaging</span>
+          </div>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center space-x-1">
+        <a href="{{ '/' | relative_url }}" class="px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:text-blue-600">Home</a>
+        <a href="{{ '/inventory.html' | relative_url }}" class="px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:text-blue-600">
+          <span class="lang-ja">在庫</span><span class="lang-zh">在库</span><span class="lang-en">Inventory</span>
+        </a>
+        <a href="{{ '/parts.html' | relative_url }}" class="px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:text-blue-600">
+          <span class="lang-ja">部品</span><span class="lang-zh">部件</span><span class="lang-en">Parts</span>
+        </a>
+        <a href="{{ '/services.html' | relative_url }}" class="px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:text-blue-600">
+          <span class="lang-ja">サービス</span><span class="lang-zh">服务</span><span class="lang-en">Services</span>
+        </a>
+        <a href="{{ '/resources.html' | relative_url }}" class="px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:text-blue-600">
+          <span class="lang-ja">リソース</span><span class="lang-zh">资料中心</span><span class="lang-en">Resources</span>
+        </a>
+        <a href="{{ '/about.html' | relative_url }}" class="px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:text-blue-600">
+          <span class="lang-ja">会社情報</span><span class="lang-zh">关于我们</span><span class="lang-en">About</span>
+        </a>
+        <a href="{{ '/contact.html' | relative_url }}" class="px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:text-blue-600">
+          <span class="lang-ja">お問い合わせ</span><span class="lang-zh">联系</span><span class="lang-en">Contact</span>
+        </a>
+      </nav>
+      <div class="hidden md:flex items-center gap-2">
+        <a href="{{ '/contact.html' | relative_url }}" class="items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-full shadow hover:bg-blue-700 text-sm font-semibold hidden md:inline-flex">
+          <span class="lang-ja">見積依頼</span><span class="lang-zh">获取报价</span><span class="lang-en">Get a Quote</span>
+        </a>
+        <div class="inline-flex rounded-full border border-slate-300 overflow-hidden">
+          <button id="btn-ja" class="px-3 py-2 text-sm bg-white hover:bg-slate-100">日</button>
+          <button id="btn-zh" class="px-3 py-2 text-sm bg-white hover:bg-slate-100">中</button>
+          <button id="btn-en" class="px-3 py-2 text-sm bg-white hover:bg-slate-100">EN</button>
+        </div>
+      </div>
+      <button class="md:hidden inline-flex items-center px-3 py-2 border rounded text-slate-700" onclick="document.getElementById('mnav').classList.toggle('hidden')">
+        <span class="lang-ja">メニュー</span><span class="lang-zh">菜单</span><span class="lang-en">Menu</span>
+      </button>
+    </div>
+    <div id="mnav" class="md:hidden hidden pb-3 space-y-1">
+      <a class='block px-3 py-2 text-slate-700 hover:bg-slate-100 rounded' href="{{ '/' | relative_url }}">Home</a>
+      <a class='block px-3 py-2 text-slate-700 hover:bg-slate-100 rounded' href="{{ '/inventory.html' | relative_url }}"><span class='lang-ja'>在庫</span><span class='lang-zh'>在库</span><span class='lang-en'>Inventory</span></a>
+      <a class='block px-3 py-2 text-slate-700 hover:bg-slate-100 rounded' href="{{ '/parts.html' | relative_url }}"><span class='lang-ja'>部品</span><span class='lang-zh'>部件</span><span class='lang-en'>Parts</span></a>
+      <a class='block px-3 py-2 text-slate-700 hover:bg-slate-100 rounded' href="{{ '/services.html' | relative_url }}"><span class='lang-ja'>サービス</span><span class='lang-zh'>服务</span><span class='lang-en'>Services</span></a>
+      <a class='block px-3 py-2 text-slate-700 hover:bg-slate-100 rounded' href="{{ '/resources.html' | relative_url }}"><span class='lang-ja'>リソース</span><span class='lang-zh'>资料中心</span><span class='lang-en'>Resources</span></a>
+      <a class='block px-3 py-2 text-slate-700 hover:bg-slate-100 rounded' href="{{ '/about.html' | relative_url }}"><span class='lang-ja'>会社情報</span><span class='lang-zh'>关于我们</span><span class='lang-en'>About</span></a>
+      <a class='block px-3 py-2 text-slate-700 hover:bg-slate-100 rounded' href="{{ '/contact.html' | relative_url }}"><span class='lang-ja'>お問い合わせ</span><span class='lang-zh'>联系</span><span class='lang-en'>Contact</span></a>
+      <div class="flex gap-2 px-3">
+        <button id="mbtn-ja" class="px-3 py-2 border rounded">日</button>
+        <button id="mbtn-zh" class="px-3 py-2 border rounded">中</button>
+        <button id="mbtn-en" class="px-3 py-2 border rounded">EN</button>
+      </div>
+    </div>
+  </div>
+</header>

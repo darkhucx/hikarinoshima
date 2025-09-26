@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }} — {{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { brand: '#1f6feb', accent: '#00b3a4' } } } };
+  </script>
+  <style>
+    .lang-ja { display: none; }
+    .lang-zh { display: inline; }
+    .lang-en { display: none; }
+    html[lang='ja'] .lang-ja { display: inline; }
+    html[lang='ja'] .lang-zh, html[lang='ja'] .lang-en { display: none; }
+    html[lang='en'] .lang-en { display: inline; }
+    html[lang='en'] .lang-ja, html[lang='en'] .lang-zh { display: none; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+  {% include header.html %}
+  <main>
+    {{ content }}
+  </main>
+  {% include footer.html %}
+  <script src="{{ '/assets/js/lang.js' | relative_url }}"></script>
+</body>
+</html>
