@@ -1,7 +1,7 @@
 # Jekyll config for GitHub Pages
 title: Hikari no Shima
 description: 肿瘤放疗与医学影像配件与一体化方案 / 腫瘍放射線治療・診断用画像の部品＆一体型ソリューション / Parts & turnkey solutions for RT & Imaging
-baseurl: ""
+baseurl: "https://darkhucx.github.io"
 url: ""
 timezone: Asia/Tokyo
 markdown: kramdown
