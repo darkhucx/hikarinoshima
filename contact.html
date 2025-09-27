@@ -2,6 +2,9 @@
 layout: default
 title: Contact
 permalink: /contact.html
+hero_image: /assets/images/contact-hero.png
+hero_alt: Contact
+hero_variant: 
 ---
 
 <section class="bg-gradient-to-b from-white to-slate-100">
@@ -11,9 +14,9 @@ permalink: /contact.html
         <span class="lang-ja">会社紹介</span><span class="lang-zh">公司简介</span><span class="lang-en">About</span>
       </span>
       <h1 class="mt-3 text-3xl md:text-4xl font-bold text-slate-900">
-        <span class="lang-ja">お問い合わせ</span><span class="lang-zh">联系与询价</span><span class="lang-en">Get in Touch</span>
+        <span class="lang-ja">会社情報</span><span class="lang-zh">关于我们</span><span class="lang-en">About Us</span>
       </h1>
-      <p class="mt-3 text-slate-600"><span class="lang-ja">装置構成・場所・スケジュールをご共有ください。</span><span class="lang-zh">请告知机型配置、地点与时间安排。</span><span class="lang-en">Share modality, configuration, and timeline.</span></p>
+      <p class="mt-3 text-slate-600"><span class="lang-ja"></span><span class="lang-zh"></span><span class="lang-en"></span></p>
       <div class="mt-6 flex gap-3">
         <a href="{ '/contact.html' | relative_url }" class="inline-flex items-center gap-2 bg-blue-600 text-white px-5 py-2.5 rounded-full shadow hover:bg-blue-700">
           <span class="lang-ja">見積依頼</span><span class="lang-zh">获取报价</span><span class="lang-en">Request a Quote</span>
@@ -23,28 +26,14 @@ permalink: /contact.html
         </a>
       </div>
     </div>
-    <div class="rounded-xl overflow-hidden shadow border border-slate-200">
-      <img src="https://placehold.co/1200x800?text=Contact" alt="Contact">
+    <div>
+      {% include hero-media.html src=page.hero_image alt=page.hero_alt variant=page.hero_variant %}
     </div>
   </div>
 </section>
 
-<section class="py-10">
-  <div class="max-w-3xl mx-auto px-4 bg-white border rounded-xl p-6">
-    <form onsubmit="event.preventDefault(); alert('ありがとうございます / 谢谢 / Thank you'); this.reset();" class="grid md:grid-cols-2 gap-4">
-      <div><label class="text-sm text-slate-600"><span class="lang-ja">お名前</span><span class="lang-zh">姓名</span><span class="lang-en">Name</span></label>
-        <input required class="mt-1 w-full border rounded-lg px-3 py-2"></div>
-      <div><label class="text-sm text-slate-600">Email</label>
-        <input required type="email" class="mt-1 w-full border rounded-lg px-3 py-2" placeholder="name@company.com"></div>
-      <div><label class="text-sm text-slate-600"><span class="lang-ja">会社名</span><span class="lang-zh">公司</span><span class="lang-en">Company</span></label>
-        <input class="mt-1 w-full border rounded-lg px-3 py-2"></div>
-      <div><label class="text-sm text-slate-600"><span class="lang-ja">国/地域</span><span class="lang-zh">国家/地区</span><span class="lang-en">Country/Region</span></label>
-        <input class="mt-1 w-full border rounded-lg px-3 py-2"></div>
-      <div class="md:col-span-2"><label class="text-sm text-slate-600"><span class="lang-ja">ご要望</span><span class="lang-zh">需求描述</span><span class="lang-en">Message</span></label>
-        <textarea rows="5" class="mt-1 w-full border rounded-lg px-3 py-2"></textarea></div>
-      <div class="md:col-span-2">
-        <button class="bg-blue-600 text-white px-5 py-2.5 rounded-full font-semibold"><span class="lang-ja">送信</span><span class="lang-zh">发送</span><span class="lang-en">Send</span></button>
-      </div>
-    </form>
+<section class="max-w-7xl mx-auto px-4 py-10">
+  <div class="bg-white border border-slate-200 rounded-xl p-6">
+    <p class="text-slate-700"><span class="lang-ja">コンテンツをここに追加します。</span><span class="lang-zh">在这里添加你的页面内容。</span><span class="lang-en">Add your page content here.</span></p>
   </div>
 </section>

@@ -1,0 +1,3 @@
+<figure class="hero-media{% if include.variant %} hero-media--{{ include.variant }}{% endif %}{% if include.class %} {{ include.class }}{% endif %}">
+  <img src="{{ include.src | relative_url }}" alt="{{ include.alt | default: '' }}" loading="lazy" class="hero-media__img">
+</figure>

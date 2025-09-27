@@ -2,6 +2,9 @@
 layout: default
 title: Resources
 permalink: /resources.html
+hero_image: /assets/images/resources-hero.png
+hero_alt: Resources
+hero_variant: 
 ---
 
 <section class="bg-gradient-to-b from-white to-slate-100">
@@ -11,7 +14,7 @@ permalink: /resources.html
         <span class="lang-ja">会社紹介</span><span class="lang-zh">公司简介</span><span class="lang-en">About</span>
       </span>
       <h1 class="mt-3 text-3xl md:text-4xl font-bold text-slate-900">
-        <span class="lang-ja">リソース</span><span class="lang-zh">资料中心</span><span class="lang-en">Resources</span>
+        <span class="lang-ja">会社情報</span><span class="lang-zh">关于我们</span><span class="lang-en">About Us</span>
       </h1>
       <p class="mt-3 text-slate-600"><span class="lang-ja"></span><span class="lang-zh"></span><span class="lang-en"></span></p>
       <div class="mt-6 flex gap-3">
@@ -23,8 +26,8 @@ permalink: /resources.html
         </a>
       </div>
     </div>
-    <div class="rounded-xl overflow-hidden shadow border border-slate-200">
-      <img src="https://placehold.co/1200x800?text=Resources" alt="Resources">
+    <div>
+      {% include hero-media.html src=page.hero_image alt=page.hero_alt variant=page.hero_variant %}
     </div>
   </div>
 </section>

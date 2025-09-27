@@ -2,6 +2,9 @@
 layout: default
 title: About
 permalink: /about.html
+hero_image: /assets/images/about-hero.png
+hero_alt: About Hikari no Shima
+hero_variant: 
 ---
 
 <section class="bg-gradient-to-b from-white to-slate-100">
@@ -23,32 +26,14 @@ permalink: /about.html
         </a>
       </div>
     </div>
-    <div class="rounded-xl overflow-hidden shadow border border-slate-200">
-      <img src="{{'/assets/images/about-team.jpg'| relative_url}}" alt="About" width="606" height="404">
+    <div>
+      {% include hero-media.html src=page.hero_image alt=page.hero_alt variant=page.hero_variant %}
     </div>
   </div>
 </section>
 
 <section class="max-w-7xl mx-auto px-4 py-10">
-  <div class="bg-white border border-slate-200 rounded-xl p-6 prose max-w-none">
-    <div class="lang-zh"><p><strong>光の島 Hikari no Shima</strong> 面向中国医疗设备维保市场，专注于<strong>肿瘤放疗与医学影像设备的配件与一体化解决方案</strong>。覆盖 LINAC、CT-Sim、HDR、TPS 以及 CT、MRI、Angio、PET/CT 等设备，我们不仅为中国客户提供<strong>配件/升级/周边</strong>，还可协助客户<strong>评估、拆机、包装、国际物流、配件再安装、远程应用/用户培训</strong>，实现<strong>配件全流程交付</strong>。</p>
-<p>我们与中国经销商、独立服务商（ISO）及 OEM 合作，致力于<strong>保证客户设备停机时间最小化</strong>、<strong>总体成本优化</strong>与<strong>供应商中立选型</strong>，并与<strong>欧美、日本多国配件运营商</strong>协同，为中国客户带来<strong>稳定可靠的配件实施与交付</strong>。</p></div>
-    <div class="lang-ja"><p><strong>光の島（Hikari no Shima）</strong> は、中国の医療機器保守市場に向けて、<strong>腫瘍放射線治療および診断用画像機器の部品と一体型（エンドツーエンド）ソリューション</strong>を提供しています。LINAC・CT-Sim・HDR・TPS に加え、CT・MRI・Angio・PET/CT までを対象に、中国のお客様へ<strong>部品／アップグレード／周辺機器</strong>を提供するだけでなく、<strong>査定、撤去、梱包、国際物流、部品の再設置、遠隔でのアプリケーション／ユーザートレーニング</strong>まで支援し、<strong>部品の全工程でのデリバリー</strong>を実現します。</p>
-<p>私たちは<strong>中国のディストリビューター</strong>、<strong>独立系サービス事業者（ISO）</strong>、<strong>OEM</strong> と連携し、<strong>装置のダウンタイム最小化</strong>、<strong>TCO（総保有コスト）の最適化</strong>、<strong>ベンダーニュートラルな選定</strong>に取り組むとともに、<strong>欧米および日本の複数の部品オペレーター</strong>と協業し、中国のお客様に<strong>安定的で信頼できる部品の実装とデリバリー</strong>を提供します。</p></div>
-    <div class="lang-en"><p><strong>Hikari no Shima</strong> serves China’s medical equipment maintenance market, specializing in <strong>parts and end-to-end solutions for radiation oncology and diagnostic imaging systems</strong>. Covering LINAC, CT-Sim, HDR, TPS, as well as CT, MRI, Angio, and PET/CT, we not only provide <strong>parts/upgrades/peripherals</strong> for customers in China, but also assist with <strong>appraisals, de-installation, crating, international logistics, re-installation of parts, and remote applications/user training</strong>, achieving <strong>end-to-end parts delivery</strong>.</p>
-<p>We collaborate with <strong>distributors in China</strong>, <strong>independent service organizations (ISOs)</strong>, and <strong>OEMs</strong>, committed to <strong>minimizing equipment downtime</strong>, <strong>optimizing total cost (TCO)</strong>, and <strong>vendor-neutral selection</strong>; together with <strong>parts operators across Europe, the United States, and Japan</strong>, we deliver <strong>stable and reliable parts implementation and delivery</strong> for customers in China.</p></div>
-    <h2 class="text-xl font-semibold mt-6"><span class="lang-zh">核心服务</span><span class="lang-ja">コアサービス</span><span class="lang-en">Key Services</span></h2>
-    <ul class="mt-2 list-disc pl-6 text-slate-700">
-      <li><span class="lang-zh">配件与耗材供应（如：磁控管/速调管、球管、MLC 控制板、RF 放大器、冷头、探测器等）</span><span class="lang-ja">部品・消耗品の供給（例：マグネトロン／クライストロン、X 線管、MLC コントローラ基板、RF アンプ、コールドヘッド、検出器 など）</span><span class="lang-en">Supply of parts and consumables (e.g., magnetrons/klystrons, X-ray tubes, MLC controller boards, RF amplifiers, cold heads, detectors, etc.)</span></li>
-      <li><span class="lang-zh">升级与延寿整备、中国医疗设备迁移/拆除/合规处置</span><span class="lang-ja">アップグレードおよび延命整備、中国における医療機器の移設／撤去／適正処分</span><span class="lang-en">Upgrades and life-extension refurbishment; relocation/removal/compliant disposal of medical equipment in China</span></li>
-      <li><span class="lang-zh">物流与通关、安装协调、验收测试支持</span><span class="lang-ja">物流・通関、設置コーディネート、受入試験支援</span><span class="lang-en">Logistics and customs clearance, installation coordination, acceptance testing support</span></li>
-      <li><span class="lang-zh">评估与报价、技术咨询、远程设备应用/用户培训</span><span class="lang-ja">査定・見積、技術コンサルティング、遠隔での機器アプリケーション／ユーザートレーニング</span><span class="lang-en">Appraisals and quotations, technical consulting, remote equipment applications/user training</span></li>
-    </ul>
-    <h2 class="text-xl font-semibold mt-6"><span class="lang-zh">覆盖机种</span><span class="lang-ja">対応モダリティ</span><span class="lang-en">Modalities Covered</span></h2>
-    <p class="text-slate-700">LINAC／CT-Sim／HDR／TPS／CT／MRI／Angio／PET-CT</p>
-    <h2 class="text-xl font-semibold mt-6"><span class="lang-zh">质量与合规</span><span class="lang-ja">品質・コンプライアンス</span><span class="lang-en">Quality & Compliance</span></h2>
-    <p class="text-slate-700"><span class="lang-zh">项目全程<strong>留痕与文档化</strong>，重视<strong>检验与追溯</strong>，遵循相关<strong>进出口与安全规范</strong>及医院制度。</span><span class="lang-ja">プロジェクト全体での<strong>記録保持と文書化</strong>を徹底し、<strong>検品・トレーサビリティ</strong>を重視。関連する<strong>輸出入および安全に関する法令</strong>、ならびに医療機関の規程を遵守します。</span><span class="lang-en">We maintain <strong>full lifecycle record-keeping and documentation</strong>, emphasize <strong>inspection and traceability</strong>, and comply with relevant <strong>import/export and safety regulations</strong> as well as hospital policies.</span></p>
-    <h2 class="text-xl font-semibold mt-6"><span class="lang-zh">基地与区域</span><span class="lang-ja">拠点・対応エリア</span><span class="lang-en">Base & Coverage</span></h2>
-    <p class="text-slate-700"><span class="lang-zh">总部日本（神奈川），服务中国及亚洲合作网络。</span><span class="lang-ja">日本（神奈川）に本社を置き、中国およびアジアのパートナーネットワークに対応しています。</span><span class="lang-en">Headquartered in Japan (Kanagawa), serving China and an Asia-wide partner network.</span></p>
+  <div class="bg-white border border-slate-200 rounded-xl p-6">
+    <p class="text-slate-700"><span class="lang-ja">ここに「会社紹介」本文を配置。</span><span class="lang-zh">这里是关于我们页面的正文。</span><span class="lang-en">Place your About page body here.</span></p>
   </div>
 </section>
