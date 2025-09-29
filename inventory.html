@@ -7,33 +7,115 @@ hero_alt: Inventory
 hero_variant: 
 ---
 
+<!-- Hero -->
 <section class="bg-gradient-to-b from-white to-slate-100">
-  <div class="max-w-7xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-8 items-center">
+  <div class="max-w-7xl mx-auto px-4 py-12 md:py-16 grid md:grid-cols-2 gap-8 items-center">
     <div>
-      <span class="inline-flex items-center gap-2 text-blue-700 bg-blue-50 px-3 py-1 rounded-full text-xs font-semibold">
-        <span class="lang-ja">会社紹介</span><span class="lang-zh">公司简介</span><span class="lang-en">About</span>
-      </span>
-      <h1 class="mt-3 text-3xl md:text-4xl font-bold text-slate-900">
-        <span class="lang-ja">会社情報</span><span class="lang-zh">关于我们</span><span class="lang-en">About Us</span>
+      <p class="text-sm font-semibold text-blue-700">
+        <span class="lang-zh">值得信赖的全流程合作伙伴</span>
+        <span class="lang-ja">信頼できるエンドツーエンドのパートナー</span>
+        <span class="lang-en">Your trusted end-to-end partner</span>
+      </p>
+
+      <h1 class="mt-3 text-3xl md:text-4xl font-bold text-slate-900 leading-tight">
+        <span class="lang-zh">二手/翻新医疗设备在库</span>
+        <span class="lang-ja">中古／リファービッシュ医療機器 在庫</span>
+        <span class="lang-en">Pre-owned / Refurbished Medical Inventory</span>
       </h1>
-      <p class="mt-3 text-slate-600"><span class="lang-ja"></span><span class="lang-zh"></span><span class="lang-en"></span></p>
+
+      <p class="mt-4 text-slate-600">
+        <span class="lang-zh">按品类浏览在库，也可联系工程师获取个性化选型建议。</span>
+        <span class="lang-ja">カテゴリ別の在庫を閲覧。エンジニアによる最適選定の提案も可能です。</span>
+        <span class="lang-en">Browse by category, or ask our engineers for tailored model recommendations.</span>
+      </p>
+
       <div class="mt-6 flex gap-3">
-        <a href="{ '/contact.html' | relative_url }" class="inline-flex items-center gap-2 bg-blue-600 text-white px-5 py-2.5 rounded-full shadow hover:bg-blue-700">
-          <span class="lang-ja">見積依頼</span><span class="lang-zh">获取报价</span><span class="lang-en">Request a Quote</span>
+        <a href="{{ '/contact.html' | relative_url }}" class="inline-flex items-center gap-2 bg-blue-600 text-white px-5 py-2.5 rounded-full shadow hover:bg-blue-700">
+          <span class="lang-zh">获取报价</span><span class="lang-ja">見積依頼</span><span class="lang-en">Get a Quote</span>
         </a>
-        <a href="{ '/inventory.html' | relative_url }" class="inline-flex items-center gap-2 border border-blue-600 text-blue-700 px-5 py-2.5 rounded-full hover:bg-blue-50">
-          <span class="lang-ja">在庫を見る</span><span class="lang-zh">浏览在库</span><span class="lang-en">Browse Inventory</span>
+        <a href="#browse" class="inline-flex items-center gap-2 border border-blue-600 text-blue-700 px-5 py-2.5 rounded-full hover:bg-blue-50">
+          <span class="lang-zh">浏览在库</span><span class="lang-ja">在庫を見る</span><span class="lang-en">Browse Inventory</span>
         </a>
       </div>
     </div>
+
     <div>
       {% include hero-media.html src=page.hero_image alt=page.hero_alt variant=page.hero_variant %}
     </div>
   </div>
 </section>
 
-<section class="max-w-7xl mx-auto px-4 py-10">
-  <div class="bg-white border border-slate-200 rounded-xl p-6">
-    <p class="text-slate-700"><span class="lang-ja">コンテンツをここに追加します。</span><span class="lang-zh">在这里添加你的页面内容。</span><span class="lang-en">Add your page content here.</span></p>
+<!-- 按品类浏览 -->
+<section id="browse" class="py-10 bg-white">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-xl font-semibold text-slate-900">
+      <span class="lang-zh">按品类浏览</span>
+      <span class="lang-ja">カテゴリ別に閲覧</span>
+      <span class="lang-en">Browse by Category</span>
+    </h2>
+
+    <div class="mt-4 grid md:grid-cols-4 gap-4">
+      <!-- 直线加速器 -->
+      <a href="#linac" class="block rounded-2xl border border-slate-200 bg-white p-5 hover:shadow">
+        <div class="font-semibold">
+          <span class="lang-zh">直线加速器</span><span class="lang-ja">ライナック</span><span class="lang-en">LINAC</span>
+        </div>
+        <div class="mt-1 text-sm text-slate-600">
+          <span class="lang-zh">Varian · Elekta · Siemens</span>
+          <span class="lang-ja">Varian・Elekta・Siemens</span>
+          <span class="lang-en">Varian · Elekta · Siemens</span>
+        </div>
+      </a>
+
+      <!-- CT -->
+      <a href="#ct" class="block rounded-2xl border border-slate-200 bg-white p-5 hover:shadow">
+        <div class="font-semibold">CT</div>
+        <div class="mt-1 text-sm text-slate-600">
+          <span class="lang-zh">GE · Siemens · Philips · Canon</span>
+          <span class="lang-ja">GE・Siemens・Philips・Canon</span>
+          <span class="lang-en">GE · Siemens · Philips · Canon</span>
+        </div>
+      </a>
+
+      <!-- MRI -->
+      <a href="#mri" class="block rounded-2xl border border-slate-200 bg-white p-5 hover:shadow">
+        <div class="font-semibold">MRI</div>
+        <div class="mt-1 text-sm text-slate-600">
+          <span class="lang-zh">1.5T · 3T</span>
+          <span class="lang-ja">1.5T・3T</span>
+          <span class="lang-en">1.5T · 3T</span>
+        </div>
+      </a>
+
+      <!-- PET/CT -->
+      <a href="#petct" class="block rounded-2xl border border-slate-200 bg-white p-5 hover:shadow">
+        <div class="font-semibold">PET/CT</div>
+        <div class="mt-1 text-sm text-slate-600">
+          <span class="lang-zh">Discovery · Biograph · Vereos</span>
+          <span class="lang-ja">Discovery・Biograph・Vereos</span>
+          <span class="lang-en">Discovery · Biograph · Vereos</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 热门搜索 -->
+<section class="py-6 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-4">
+    <h3 class="text-base font-semibold text-slate-900">
+      <span class="lang-zh">热门搜索</span>
+      <span class="lang-ja">人気の検索</span>
+      <span class="lang-en">Popular Searches</span>
+    </h3>
+
+    <div class="mt-3 flex flex-wrap gap-2">
+      <!-- 标签芯片，先用锚点；将来可换为查询页链接 -->
+      <a href="#q=truebeam" class="inline-block px-3 py-1 rounded-full border border-slate-200 bg-white text-slate-700 text-sm hover:bg-slate-100">Varian TrueBeam</a>
+      <a href="#q=versahd" class="inline-block px-3 py-1 rounded-full border border-slate-200 bg-white text-slate-700 text-sm hover:bg-slate-100">Elekta Versa HD</a>
+      <a href="#q=gerevct" class="inline-block px-3 py-1 rounded-full border border-slate-200 bg-white text-slate-700 text-sm hover:bg-slate-100">GE Revolution CT</a>
+      <a href="#q=aera15t" class="inline-block px-3 py-1 rounded-full border border-slate-200 bg-white text-slate-700 text-sm hover:bg-slate-100">Siemens Aera 1.5T</a>
+      <a href="#q=discoverypetct" class="inline-block px-3 py-1 rounded-full border border-slate-200 bg-white text-slate-700 text-sm hover:bg-slate-100">GE Discovery PET/CT</a>
+    </div>
   </div>
 </section>

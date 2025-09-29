@@ -1,13 +1,93 @@
----
-layout: default
-title: About
-permalink: /about.html
-hero_image: /assets/images/about-hero.png
-hero_alt: About Hikari no Shima
-hero_variant: 
----
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About — Hikari no Shima</title>
+  <meta name="description" content="肿瘤放疗与医学影像配件与一体化方案 / 腫瘍放射線治療・診断用画像の部品＆一体型ソリューション / Parts & turnkey solutions for RT & Imaging">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { brand: '#1f6feb', accent: '#00b3a4' } } } };
+  </script>
+  <style>
+    .lang-ja { display: none; }
+    .lang-zh { display: inline; }
+    .lang-en { display: none; }
+    html[lang='ja'] .lang-ja { display: inline; }
+    html[lang='ja'] .lang-zh, html[lang='ja'] .lang-en { display: none; }
+    html[lang='en'] .lang-en { display: inline; }
+    html[lang='en'] .lang-ja, html[lang='en'] .lang-zh { display: none; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex items-center justify-between h-16">
+      <a href="/" class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-lg bg-gradient-to-tr from-blue-600 to-emerald-500 grid place-items-center text-white font-bold shadow">Hi</div>
+        <div class="leading-4">
+          <div class="font-semibold">光の島 Hikari no Shima</div>
+          <div class="text-xs text-slate-500">
+            <span class="lang-ja">腫瘍放射線治療・診断用画像の部品＆一体型ソリューション</span>
+            <span class="lang-zh">肿瘤放疗与医学影像配件与一体化方案</span>
+            <span class="lang-en">Parts & turnkey solutions for RT & Imaging</span>
+          </div>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center space-x-1">
+        <a href="/" class="px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:text-blue-600">Home</a>
+        <a href="/inventory.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:text-blue-600">
+          <span class="lang-ja">在庫</span><span class="lang-zh">在库</span><span class="lang-en">Inventory</span>
+        </a>
+        <a href="/parts.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:text-blue-600">
+          <span class="lang-ja">部品</span><span class="lang-zh">部件</span><span class="lang-en">Parts</span>
+        </a>
+        <a href="/services.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:text-blue-600">
+          <span class="lang-ja">サービス</span><span class="lang-zh">服务</span><span class="lang-en">Services</span>
+        </a>
+        <a href="/resources.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:text-blue-600">
+          <span class="lang-ja">リソース</span><span class="lang-zh">资料中心</span><span class="lang-en">Resources</span>
+        </a>
+        <a href="/about.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:text-blue-600">
+          <span class="lang-ja">会社情報</span><span class="lang-zh">关于我们</span><span class="lang-en">About</span>
+        </a>
+        <a href="/contact.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:text-blue-600">
+          <span class="lang-ja">お問い合わせ</span><span class="lang-zh">联系</span><span class="lang-en">Contact</span>
+        </a>
+      </nav>
+      <div class="hidden md:flex items-center gap-2">
+        <a href="/contact.html" class="items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-full shadow hover:bg-blue-700 text-sm font-semibold hidden md:inline-flex">
+          <span class="lang-ja">見積依頼</span><span class="lang-zh">获取报价</span><span class="lang-en">Get a Quote</span>
+        </a>
+        <div class="inline-flex rounded-full border border-slate-300 overflow-hidden">
+          <button id="btn-ja" class="px-3 py-2 text-sm bg-white hover:bg-slate-100">日</button>
+          <button id="btn-zh" class="px-3 py-2 text-sm bg-white hover:bg-slate-100">中</button>
+          <button id="btn-en" class="px-3 py-2 text-sm bg-white hover:bg-slate-100">EN</button>
+        </div>
+      </div>
+      <button class="md:hidden inline-flex items-center px-3 py-2 border rounded text-slate-700" onclick="document.getElementById('mnav').classList.toggle('hidden')">
+        <span class="lang-ja">メニュー</span><span class="lang-zh">菜单</span><span class="lang-en">Menu</span>
+      </button>
+    </div>
+    <div id="mnav" class="md:hidden hidden pb-3 space-y-1">
+      <a class='block px-3 py-2 text-slate-700 hover:bg-slate-100 rounded' href="/">Home</a>
+      <a class='block px-3 py-2 text-slate-700 hover:bg-slate-100 rounded' href="/inventory.html"><span class='lang-ja'>在庫</span><span class='lang-zh'>在库</span><span class='lang-en'>Inventory</span></a>
+      <a class='block px-3 py-2 text-slate-700 hover:bg-slate-100 rounded' href="/parts.html"><span class='lang-ja'>部品</span><span class='lang-zh'>部件</span><span class='lang-en'>Parts</span></a>
+      <a class='block px-3 py-2 text-slate-700 hover:bg-slate-100 rounded' href="/services.html"><span class='lang-ja'>サービス</span><span class='lang-zh'>服务</span><span class='lang-en'>Services</span></a>
+      <a class='block px-3 py-2 text-slate-700 hover:bg-slate-100 rounded' href="/resources.html"><span class='lang-ja'>リソース</span><span class='lang-zh'>资料中心</span><span class='lang-en'>Resources</span></a>
+      <a class='block px-3 py-2 text-slate-700 hover:bg-slate-100 rounded' href="/about.html"><span class='lang-ja'>会社情報</span><span class='lang-zh'>关于我们</span><span class='lang-en'>About</span></a>
+      <a class='block px-3 py-2 text-slate-700 hover:bg-slate-100 rounded' href="/contact.html"><span class='lang-ja'>お問い合わせ</span><span class='lang-zh'>联系</span><span class='lang-en'>Contact</span></a>
+      <div class="flex gap-2 px-3">
+        <button id="mbtn-ja" class="px-3 py-2 border rounded">日</button>
+        <button id="mbtn-zh" class="px-3 py-2 border rounded">中</button>
+        <button id="mbtn-en" class="px-3 py-2 border rounded">EN</button>
+      </div>
+    </div>
+  </div>
+</header>
 
-<!-- Hero -->
+  <main>
+    <!-- Hero -->
 <section class="bg-gradient-to-b from-white to-slate-100">
   <div class="max-w-7xl mx-auto px-4 py-12 md:py-16 grid md:grid-cols-2 gap-8 items-center">
     <div>
@@ -30,17 +110,20 @@ hero_variant:
       </p>
 
       <div class="mt-6 flex gap-3">
-        <a href="{{ '/contact.html' | relative_url }}" class="inline-flex items-center gap-2 bg-blue-600 text-white px-5 py-2.5 rounded-full shadow hover:bg-blue-700">
+        <a href="/contact.html" class="inline-flex items-center gap-2 bg-blue-600 text-white px-5 py-2.5 rounded-full shadow hover:bg-blue-700">
           <span class="lang-zh">获取报价</span><span class="lang-ja">見積依頼</span><span class="lang-en">Get a Quote</span>
         </a>
-        <a href="{{ '/inventory.html' | relative_url }}" class="inline-flex items-center gap-2 border border-blue-600 text-blue-700 px-5 py-2.5 rounded-full hover:bg-blue-50">
+        <a href="/inventory.html" class="inline-flex items-center gap-2 border border-blue-600 text-blue-700 px-5 py-2.5 rounded-full hover:bg-blue-50">
           <span class="lang-zh">浏览在库</span><span class="lang-ja">在庫を見る</span><span class="lang-en">Browse Inventory</span>
         </a>
       </div>
     </div>
 
     <div>
-      {% include hero-media.html src=page.hero_image alt=page.hero_alt variant=page.hero_variant %}
+      <figure class="hero-media">
+  <img src="/assets/images/about-hero.png" alt="About Hikari no Shima" loading="lazy" class="hero-media__img">
+</figure>
+
     </div>
   </div>
 </section>
@@ -146,3 +229,64 @@ hero_variant:
     </p>
   </div>
 </section>
+
+  </main>
+  <footer class="bg-slate-900 text-slate-300 mt-20">
+  <div class="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-4 gap-8">
+    <div>
+      <div class="flex items-center gap-3">
+        <div
+          class="w-9 h-9 rounded-lg bg-gradient-to-tr from-blue-600 to-emerald-500 grid place-items-center text-white font-bold">
+          Hi</div>
+        <div>
+          <div class="font-semibold text-white">光の島 Hikari no Shima</div>
+          <div class="text-xs text-slate-400">
+            <span class="lang-ja">腫瘍放射線治療・診断用画像の部品＆一体型ソリューション</span>
+            <span class="lang-zh">肿瘤放疗与医学影像配件与一体化方案</span>
+            <span class="lang-en">Parts & turnkey solutions for RT & Imaging</span>
+          </div>
+        </div>
+      </div>
+      <p class="text-sm text-slate-400 mt-4">© <span id="year">2025</span> Hikari no Shima Co., Ltd. All rights
+        reserved.</p>
+    </div>
+    <div>
+      <div class="font-semibold text-white"><span class="lang-ja">会社</span><span class="lang-zh">公司</span><span
+          class="lang-en">Company</span></div>
+      <ul class="mt-3 space-y-2 text-sm">
+        <li><a href="/about.html" class="hover:text-white"><span class="lang-ja">会社情報</span><span
+              class="lang-zh">关于我们</span><span class="lang-en">About</span></a></li>
+        <li><a href="/services.html" class="hover:text-white"><span
+              class="lang-ja">サービス</span><span class="lang-zh">服务</span><span class="lang-en">Services</span></a></li>
+        <li><a href="/inventory.html" class="hover:text-white"><span
+              class="lang-ja">在庫</span><span class="lang-zh">在库</span><span class="lang-en">Inventory</span></a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="font-semibold text-white"><span class="lang-ja">連絡先</span><span class="lang-zh">联系</span><span
+          class="lang-en">Contact</span></div>
+      <ul class="mt-3 space-y-2 text-sm">
+        <li>Fujisawa, Kanagawa, Japan</li>
+        <li><a href="mailto:sales@lumishima.com" class="hover:text-white">sales@lumishima.com</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="font-semibold text-white">Legal</div>
+      <ul class="mt-3 space-y-2 text-sm">
+        <li><a class="hover:text-white" href="#">Terms</a></li>
+        <li><a class="hover:text-white" href="#">Privacy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 py-4 text-xs text-slate-400">
+      <span class="lang-ja">日本で心を込めて制作</span>
+      <span class="lang-zh">日本用心制作</span>
+      <span class="lang-en">Made with ♥ in Japan</span>
+    </div>
+  </div>
+</footer>
+
+  <script src="/assets/js/lang.js"></script>
+</body>
+</html>

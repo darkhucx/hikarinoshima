@@ -1,0 +1,66 @@
+---
+layout: default
+title: Services
+permalink: /services.html
+hero_image: /assets/images/services-hero.png
+hero_alt: Services
+hero_variant: 
+---
+
+<section class="bg-gradient-to-b from-white to-slate-100">
+  <div class="max-w-7xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-8 items-center">
+       <h2 class="text-xl font-semibold text-slate-900">
+      <span class="lang-zh">医疗设备交付与全流程服务</span>
+      <span class="lang-ja">医療機器の導入・エンドツーエンドサービス</span>
+      <span class="lang-en">Medical Equipment Delivery & End-to-End Services</span>
+    </h2>
+    <div class="mt-4 bg-white border border-slate-200 rounded-2xl p-6 prose max-w-none text-slate-700">
+      <p>
+        <span class="lang-zh">面向 LINAC、CT/CT-Sim、HDR、TPS、CT、MRI、Angio、PET/CT 等，我们从方案到验收交付，覆盖现场勘查、拆机、包装、跨境物流、再安装、校准与应用培训，以医院现场经验降低停机风险，控制总体成本（TCO）。</span>
+        <span class="lang-ja">LINAC・CT/CT-Sim・HDR・TPS・CT・MRI・Angio・PET/CT を対象に、現調から撤去・梱包・国際輸送・再設置・校正・アプリケーショントレーニング、最終受入まで一気通貫で対応。病院現場の知見でダウンタイムを抑え、TCO を最適化します。</span>
+        <span class="lang-en">For LINAC, CT/CT-Sim, HDR, TPS, CT, MRI, Angio and PET/CT, we cover the full lifecycle—from site survey, de-install, crating, cross-border logistics, re-install, calibration to applications training and acceptance—reducing downtime and optimizing TCO with real hospital-site know-how.</span>
+      </p>
+      <ul class="grid md:grid-cols-2 gap-2 !list-disc pl-6">
+        <li>
+          <span class="lang-zh">采购前尽调与技术路线建议（含选型、升级与延寿方案）。</span>
+          <span class="lang-ja">購買前デューデリ＆技術方針の提案（選定・アップグレード・延命整備）。</span>
+          <span class="lang-en">Pre-purchase diligence and technical roadmap (selection, upgrades, life-extension).</span>
+        </li>
+        <li>
+          <span class="lang-zh">现场勘查与可行性评估（电力/冷却/屏蔽/吊装路径）。</span>
+          <span class="lang-ja">現地調査と実行可能性評価（電源・冷却・遮蔽・搬入経路）。</span>
+          <span class="lang-en">Site survey & feasibility (power/cooling/shielding/lifting routes).</span>
+        </li>
+        <li>
+          <span class="lang-zh">合规拆机、专业包装与序列号清单化，确保追溯。</span>
+          <span class="lang-ja">適合撤去・専門梱包・シリアル管理でトレーサビリティを確保。</span>
+          <span class="lang-en">Compliant de-install, professional crating and serial-number traceability.</span>
+        </li>
+        <li>
+          <span class="lang-zh">国际运输、通关与保险，门到门时效管理。</span>
+          <span class="lang-ja">国際輸送・通関・保険、ドアツードアのリードタイム管理。</span>
+          <span class="lang-en">International transport, customs & insurance with door-to-door lead-time control.</span>
+        </li>
+        <li>
+          <span class="lang-zh">到院再安装、校准/QA、联网与应用培训。</span>
+          <span class="lang-ja">院内再設置、校正／QA、ネットワーク連携、アプリ研修。</span>
+          <span class="lang-en">Re-installation, calibration/QA, networking integration, applications training.</span>
+        </li>
+        <li>
+          <span class="lang-zh">FAT/SAT 验收支持与质保随行备件包。</span>
+          <span class="lang-ja">FAT/SAT 受入支援と保証用スパアキット。</span>
+          <span class="lang-en">FAT/SAT acceptance support and warranty spare-parts kits.</span>
+        </li>
+      </ul>
+    </div>
+    <div>
+      {% include hero-media.html src=page.hero_image alt=page.hero_alt variant=page.hero_variant %}
+    </div>
+  </div>
+</section>
+
+<section class="max-w-7xl mx-auto px-4 py-10">
+  <div class="bg-white border border-slate-200 rounded-xl p-6">
+    <p class="text-slate-700"><span class="lang-ja">コンテンツをここに追加します。</span><span class="lang-zh">在这里添加你的页面内容。</span><span class="lang-en">Add your page content here.</span></p>
+  </div>
+</section>

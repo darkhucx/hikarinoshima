@@ -7,33 +7,105 @@ hero_alt: Resources
 hero_variant: 
 ---
 
+<!-- Hero -->
 <section class="bg-gradient-to-b from-white to-slate-100">
-  <div class="max-w-7xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-8 items-center">
+  <div class="max-w-7xl mx-auto px-4 py-12 md:py-16 grid md:grid-cols-2 gap-8 items-center">
     <div>
-      <span class="inline-flex items-center gap-2 text-blue-700 bg-blue-50 px-3 py-1 rounded-full text-xs font-semibold">
-        <span class="lang-ja">会社紹介</span><span class="lang-zh">公司简介</span><span class="lang-en">About</span>
-      </span>
-      <h1 class="mt-3 text-3xl md:text-4xl font-bold text-slate-900">
-        <span class="lang-ja">会社情報</span><span class="lang-zh">关于我们</span><span class="lang-en">About Us</span>
+      <p class="text-sm font-semibold text-blue-700">
+        <span class="lang-zh">值得信赖的全球合作伙伴</span>
+        <span class="lang-ja">信頼できるグローバルパートナー</span>
+        <span class="lang-en">Your trusted global partner</span>
+      </p>
+
+      <h1 class="mt-3 text-3xl md:text-4xl font-bold text-slate-900 leading-tight">
+        <span class="lang-zh">资料中心</span>
+        <span class="lang-ja">資料センター</span>
+        <span class="lang-en">Resources</span>
       </h1>
-      <p class="mt-3 text-slate-600"><span class="lang-ja"></span><span class="lang-zh"></span><span class="lang-en"></span></p>
+
+      <p class="mt-4 text-slate-600">
+        <span class="lang-zh">下载设备对比与采购清单，辅助科学决策。需要日/中文本地化版本请联系我们。</span>
+        <span class="lang-ja">装置比較や購買チェックリストをダウンロード。日中ローカライズ版が必要な場合はご連絡ください。</span>
+        <span class="lang-en">Download comparison sheets and purchasing checklists. Contact us for localized JP/CN versions.</span>
+      </p>
+
       <div class="mt-6 flex gap-3">
-        <a href="{ '/contact.html' | relative_url }" class="inline-flex items-center gap-2 bg-blue-600 text-white px-5 py-2.5 rounded-full shadow hover:bg-blue-700">
-          <span class="lang-ja">見積依頼</span><span class="lang-zh">获取报价</span><span class="lang-en">Request a Quote</span>
+        <a href="{{ '/contact.html' | relative_url }}" class="inline-flex items-center gap-2 bg-blue-600 text-white px-5 py-2.5 rounded-full shadow hover:bg-blue-700">
+          <span class="lang-zh">获取报价</span><span class="lang-ja">見積依頼</span><span class="lang-en">Get a Quote</span>
         </a>
-        <a href="{ '/inventory.html' | relative_url }" class="inline-flex items-center gap-2 border border-blue-600 text-blue-700 px-5 py-2.5 rounded-full hover:bg-blue-50">
-          <span class="lang-ja">在庫を見る</span><span class="lang-zh">浏览在库</span><span class="lang-en">Browse Inventory</span>
+        <a href="{{ '/inventory.html' | relative_url }}" class="inline-flex items-center gap-2 border border-blue-600 text-blue-700 px-5 py-2.5 rounded-full hover:bg-blue-50">
+          <span class="lang-zh">浏览在库</span><span class="lang-ja">在庫を見る</span><span class="lang-en">Browse Inventory</span>
         </a>
       </div>
     </div>
+
     <div>
       {% include hero-media.html src=page.hero_image alt=page.hero_alt variant=page.hero_variant %}
     </div>
   </div>
 </section>
 
-<section class="max-w-7xl mx-auto px-4 py-10">
-  <div class="bg-white border border-slate-200 rounded-xl p-6">
-    <p class="text-slate-700"><span class="lang-ja">コンテンツをここに追加します。</span><span class="lang-zh">在这里添加你的页面内容。</span><span class="lang-en">Add your page content here.</span></p>
+<!-- 分类卡片 -->
+<section class="py-10 bg-white">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="grid md:grid-cols-3 gap-4">
+      <!-- LINAC 指南 -->
+      <a href="#linac-guide" class="block rounded-2xl border border-slate-200 bg-white p-5 hover:shadow">
+        <div class="font-semibold">
+          <span class="lang-zh">直线加速器指南</span>
+          <span class="lang-ja">ライナック ガイド</span>
+          <span class="lang-en">LINAC Guide</span>
+        </div>
+        <div class="mt-1 text-sm text-slate-600">
+          <span class="lang-zh">参考功率、选型参考</span>
+          <span class="lang-ja">参考出力・選定</span>
+          <span class="lang-en">Power classes & selection</span>
+        </div>
+      </a>
+
+      <!-- CT / 模拟定位 -->
+      <a href="#ct-ctsim" class="block rounded-2xl border border-slate-200 bg-white p-5 hover:shadow">
+        <div class="font-semibold">CT / <span class="lang-zh">模拟定位</span><span class="lang-ja">CT-Sim</span><span class="lang-en">CT-Sim</span></div>
+        <div class="mt-1 text-sm text-slate-600">
+          <span class="lang-zh">球管 / 配置建议</span>
+          <span class="lang-ja">管球・構成の提案</span>
+          <span class="lang-en">Tubes & configuration tips</span>
+        </div>
+      </a>
+
+      <!-- MRI 对比 -->
+      <a href="#mri-compare" class="block rounded-2xl border border-slate-200 bg-white p-5 hover:shadow">
+        <div class="font-semibold">MRI</div>
+        <div class="mt-1 text-sm text-slate-600">
+          <span class="lang-zh">平台对比</span>
+          <span class="lang-ja">プラットフォーム比較</span>
+          <span class="lang-en">Platform comparison</span>
+        </div>
+      </a>
+
+      <!-- PET/CT 资料 -->
+      <a href="#petct" class="block rounded-2xl border border-slate-200 bg-white p-5 hover:shadow">
+        <div class="font-semibold">PET/CT</div>
+        <div class="mt-1 text-sm text-slate-600">
+          <span class="lang-zh">剂量 / 温控 / 探测器</span>
+          <span class="lang-ja">線量・温調・検出器</span>
+          <span class="lang-en">Dose, thermal control & detectors</span>
+        </div>
+      </a>
+
+      <!-- 浅部治疗机参考 -->
+      <a href="#orthovoltage" class="block rounded-2xl border border-slate-200 bg-white p-5 hover:shadow">
+        <div class="font-semibold">
+          <span class="lang-zh">浅部治疗机参考</span>
+          <span class="lang-ja">浅部治療装置 リファレンス</span>
+          <span class="lang-en">Superficial Therapy Reference</span>
+        </div>
+        <div class="mt-1 text-sm text-slate-600">
+          <span class="lang-zh">资料汇编</span>
+          <span class="lang-ja">資料集</span>
+          <span class="lang-en">Document bundle</span>
+        </div>
+      </a>
+    </div>
   </div>
 </section>

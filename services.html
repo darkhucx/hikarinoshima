@@ -7,33 +7,120 @@ hero_alt: Services
 hero_variant: 
 ---
 
+<!-- Hero -->
 <section class="bg-gradient-to-b from-white to-slate-100">
-  <div class="max-w-7xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-8 items-center">
+  <div class="max-w-7xl mx-auto px-4 py-12 md:py-16 grid md:grid-cols-2 gap-8 items-center">
     <div>
-      <span class="inline-flex items-center gap-2 text-blue-700 bg-blue-50 px-3 py-1 rounded-full text-xs font-semibold">
-        <span class="lang-ja">会社紹介</span><span class="lang-zh">公司简介</span><span class="lang-en">About</span>
-      </span>
-      <h1 class="mt-3 text-3xl md:text-4xl font-bold text-slate-900">
-        <span class="lang-ja">会社情報</span><span class="lang-zh">关于我们</span><span class="lang-en">About Us</span>
+      <p class="text-sm font-semibold text-blue-700">
+        <span class="lang-zh">值得信赖的全球合作伙伴</span>
+        <span class="lang-ja">信頼できるグローバルパートナー</span>
+        <span class="lang-en">Your trusted global partner</span>
+      </p>
+
+      <h1 class="mt-3 text-3xl md:text-4xl font-bold text-slate-900 leading-tight">
+        <span class="lang-zh">医疗设备交付与全流程服务</span>
+        <span class="lang-ja">医療機器の導入・エンドツーエンドサービス</span>
+        <span class="lang-en">Medical Equipment Delivery & End-to-End Services</span>
       </h1>
-      <p class="mt-3 text-slate-600"><span class="lang-ja"></span><span class="lang-zh"></span><span class="lang-en"></span></p>
+
+      <p class="mt-4 text-slate-600">
+        <span class="lang-zh">从方案到验收，覆盖勘查、拆机、包装、运输、安装与培训。</span>
+        <span class="lang-ja">現調・撤去・梱包・輸送・再設置・トレーニングまでを一貫対応。</span>
+        <span class="lang-en">From survey and de-install to logistics, re-install and training.</span>
+      </p>
+
       <div class="mt-6 flex gap-3">
-        <a href="{ '/contact.html' | relative_url }" class="inline-flex items-center gap-2 bg-blue-600 text-white px-5 py-2.5 rounded-full shadow hover:bg-blue-700">
-          <span class="lang-ja">見積依頼</span><span class="lang-zh">获取报价</span><span class="lang-en">Request a Quote</span>
+        <a href="{{ '/contact.html' | relative_url }}" class="inline-flex items-center gap-2 bg-blue-600 text-white px-5 py-2.5 rounded-full shadow hover:bg-blue-700">
+          <span class="lang-zh">获取报价</span><span class="lang-ja">見積依頼</span><span class="lang-en">Get a Quote</span>
         </a>
-        <a href="{ '/inventory.html' | relative_url }" class="inline-flex items-center gap-2 border border-blue-600 text-blue-700 px-5 py-2.5 rounded-full hover:bg-blue-50">
-          <span class="lang-ja">在庫を見る</span><span class="lang-zh">浏览在库</span><span class="lang-en">Browse Inventory</span>
+        <a href="{{ '/inventory.html' | relative_url }}" class="inline-flex items-center gap-2 border border-blue-600 text-blue-700 px-5 py-2.5 rounded-full hover:bg-blue-50">
+          <span class="lang-zh">浏览在库</span><span class="lang-ja">在庫を見る</span><span class="lang-en">Browse Inventory</span>
         </a>
       </div>
     </div>
+
     <div>
       {% include hero-media.html src=page.hero_image alt=page.hero_alt variant=page.hero_variant %}
     </div>
   </div>
 </section>
 
-<section class="max-w-7xl mx-auto px-4 py-10">
-  <div class="bg-white border border-slate-200 rounded-xl p-6">
-    <p class="text-slate-700"><span class="lang-ja">コンテンツをここに追加します。</span><span class="lang-zh">在这里添加你的页面内容。</span><span class="lang-en">Add your page content here.</span></p>
+<!-- 1) 医疗设备交付与全流程服务 · Short -->
+<section id="service-overview" class="py-10">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-xl font-semibold text-slate-900">
+      <span class="lang-zh">医疗设备交付与全流程服务</span>
+      <span class="lang-ja">医療機器の導入・エンドツーエンドサービス</span>
+      <span class="lang-en">Medical Equipment Delivery & End-to-End Services</span>
+    </h2>
+    <div class="mt-4 bg-white border border-slate-200 rounded-2xl p-6 prose max-w-none text-slate-700">
+      <p>
+        <span class="lang-zh">覆盖 LINAC／CT／MRI／PET/CT 等，从勘查、拆机、包装、跨境运输，到再安装、QA 与培训，一体化交付。</span>
+        <span class="lang-ja">LINAC／CT／MRI／PET/CT を対象に、現調・撤去・梱包・国際輸送から再設置・QA・トレーニングまで一貫対応。</span>
+        <span class="lang-en">For LINAC/CT/MRI/PET-CT: one flow from survey, de-install and crating, logistics, to re-install, QA and training.</span>
+      </p>
+      <ul class="!list-disc pl-6 grid md:grid-cols-2 gap-2">
+        <li><span class="lang-zh">尽调与选型</span><span class="lang-ja">デューデリ＆選定</span><span class="lang-en">Due diligence & selection</span></li>
+        <li><span class="lang-zh">拆机与专业包装（序列号留痕）</span><span class="lang-ja">撤去・梱包（シリアル管理）</span><span class="lang-en">De-install & crating (serials)</span></li>
+        <li><span class="lang-zh">国际物流与通关</span><span class="lang-ja">国際輸送・通関</span><span class="lang-en">International logistics & customs</span></li>
+        <li><span class="lang-zh">再安装、QA 与应用培训</span><span class="lang-ja">再設置・QA・アプリ研修</span><span class="lang-en">Re-install, QA & training</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 2) 工作范围 · Short -->
+<section id="scope" class="py-6">
+  <div class="max-w-7xl mx-auto px-4">
+    <h3 class="text-base font-semibold text-slate-900">
+      <span class="lang-zh">工作范围</span>
+      <span class="lang-ja">作業範囲</span>
+      <span class="lang-en">Scope of Work</span>
+    </h3>
+    <div class="mt-3 bg-white border border-slate-200 rounded-2xl p-6 text-sm text-slate-700">
+      <ul class="!list-disc pl-6 grid md:grid-cols-2 gap-2">
+        <li><span class="lang-zh">计划与里程碑</span><span class="lang-ja">計画・マイルストン</span><span class="lang-en">Plan & milestones</span></li>
+        <li><span class="lang-zh">现场勘查与可行性</span><span class="lang-ja">現調・実行性</span><span class="lang-en">Site survey & feasibility</span></li>
+        <li><span class="lang-zh">多方协调（医院／OEM／物流）</span><span class="lang-ja">関係者調整（病院／OEM／物流）</span><span class="lang-en">Stakeholder coordination</span></li>
+        <li><span class="lang-zh">公用工程核验（电力／冷却／网络）</span><span class="lang-ja">設備確認（電源／冷却／ネット）</span><span class="lang-en">Utilities readiness checks</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 3) 交付物 · Short -->
+<section id="deliverables" class="py-6">
+  <div class="max-w-7xl mx-auto px-4">
+    <h3 class="text-base font-semibold text-slate-900">
+      <span class="lang-zh">交付物</span>
+      <span class="lang-ja">成果物</span>
+      <span class="lang-en">Deliverables</span>
+    </h3>
+    <div class="mt-3 bg-white border border-slate-200 rounded-2xl p-6 text-sm text-slate-700">
+      <ul class="!list-disc pl-6 grid md:grid-cols-2 gap-2">
+        <li><span class="lang-zh">SOW／进度／风险清单</span><span class="lang-ja">SOW／スケジュール／リスク</span><span class="lang-en">SOW, schedule & risks</span></li>
+        <li><span class="lang-zh">序列号与装箱清单＋照片</span><span class="lang-ja">シリアル・梱包リスト＋写真</span><span class="lang-en">Serials & packing list + photos</span></li>
+        <li><span class="lang-zh">运输／通关单证与保险</span><span class="lang-ja">輸送／通関書類・保険</span><span class="lang-en">Shipping/customs docs & insurance</span></li>
+        <li><span class="lang-zh">QA 与 FAT／SAT 验收记录</span><span class="lang-ja">QA・FAT／SAT 受入記録</span><span class="lang-en">QA & FAT/SAT records</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 4) 可选项 · Short -->
+<section id="options" class="py-6">
+  <div class="max-w-7xl mx-auto px-4">
+    <h3 class="text-base font-semibold text-slate-900">
+      <span class="lang-zh">可选项</span>
+      <span class="lang-ja">オプション</span>
+      <span class="lang-en">Optional Add-ons</span>
+    </h3>
+    <div class="mt-3 bg-white border border-slate-200 rounded-2xl p-6 text-sm text-slate-700">
+      <ul class="!list-disc pl-6 grid md:grid-cols-2 gap-2">
+        <li><span class="lang-zh">电力／UPS 与冷却升级</span><span class="lang-ja">電源／UPS・冷却強化</span><span class="lang-en">Power/UPS & cooling</span></li>
+        <li><span class="lang-zh">MRI 氦气与充放磁</span><span class="lang-ja">MRI ヘリウム・ランプ</span><span class="lang-en">MRI helium & ramp</span></li>
+        <li><span class="lang-zh">维保与 SLA／远程监控</span><span class="lang-ja">保守・SLA／監視</span><span class="lang-en">Maintenance & SLAs</span></li>
+      </ul>
+    </div>
   </div>
 </section>

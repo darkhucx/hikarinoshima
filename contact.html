@@ -7,33 +7,149 @@ hero_alt: Contact
 hero_variant: 
 ---
 
+<!-- Hero -->
 <section class="bg-gradient-to-b from-white to-slate-100">
-  <div class="max-w-7xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-8 items-center">
+  <div class="max-w-7xl mx-auto px-4 py-12 md:py-16 grid md:grid-cols-2 gap-8 items-center">
     <div>
-      <span class="inline-flex items-center gap-2 text-blue-700 bg-blue-50 px-3 py-1 rounded-full text-xs font-semibold">
-        <span class="lang-ja">会社紹介</span><span class="lang-zh">公司简介</span><span class="lang-en">About</span>
-      </span>
-      <h1 class="mt-3 text-3xl md:text-4xl font-bold text-slate-900">
-        <span class="lang-ja">会社情報</span><span class="lang-zh">关于我们</span><span class="lang-en">About Us</span>
+      <p class="text-sm font-semibold text-blue-700">
+        <span class="lang-zh">值得信赖的全流程合作伙伴</span>
+        <span class="lang-ja">信頼できるエンドツーエンドのパートナー</span>
+        <span class="lang-en">Your trusted end-to-end partner</span>
+      </p>
+
+      <h1 class="mt-3 text-3xl md:text-4xl font-bold text-slate-900 leading-tight">
+        <span class="lang-zh">联系与询价</span>
+        <span class="lang-ja">お問い合わせ・お見積り</span>
+        <span class="lang-en">Contact & Quote</span>
       </h1>
-      <p class="mt-3 text-slate-600"><span class="lang-ja"></span><span class="lang-zh"></span><span class="lang-en"></span></p>
+
+      <p class="mt-4 text-slate-600">
+        <span class="lang-zh">请告知您的机型配置、地点与时间安排，我们将尽快回复。</span>
+        <span class="lang-ja">装置構成・場所・スケジュールをご記入ください。折り返しご連絡します。</span>
+        <span class="lang-en">Tell us your system, location, and timeline—we’ll get back shortly.</span>
+      </p>
+
       <div class="mt-6 flex gap-3">
-        <a href="{ '/contact.html' | relative_url }" class="inline-flex items-center gap-2 bg-blue-600 text-white px-5 py-2.5 rounded-full shadow hover:bg-blue-700">
-          <span class="lang-ja">見積依頼</span><span class="lang-zh">获取报价</span><span class="lang-en">Request a Quote</span>
-        </a>
-        <a href="{ '/inventory.html' | relative_url }" class="inline-flex items-center gap-2 border border-blue-600 text-blue-700 px-5 py-2.5 rounded-full hover:bg-blue-50">
-          <span class="lang-ja">在庫を見る</span><span class="lang-zh">浏览在库</span><span class="lang-en">Browse Inventory</span>
+        <a href="{{ '/inventory.html' | relative_url }}" class="inline-flex items-center gap-2 border border-blue-600 text-blue-700 px-5 py-2.5 rounded-full hover:bg-blue-50">
+          <span class="lang-zh">浏览在库</span><span class="lang-ja">在庫を見る</span><span class="lang-en">Browse Inventory</span>
         </a>
       </div>
     </div>
+
     <div>
       {% include hero-media.html src=page.hero_image alt=page.hero_alt variant=page.hero_variant %}
     </div>
   </div>
 </section>
 
-<section class="max-w-7xl mx-auto px-4 py-10">
-  <div class="bg-white border border-slate-200 rounded-xl p-6">
-    <p class="text-slate-700"><span class="lang-ja">コンテンツをここに追加します。</span><span class="lang-zh">在这里添加你的页面内容。</span><span class="lang-en">Add your page content here.</span></p>
+<!-- Contact Form -->
+<section class="py-8 bg-slate-50">
+  <div class="max-w-3xl mx-auto px-4">
+    <form id="contactForm" method="POST" action="https://formspree.io/f/xxxxxxxx"
+          class="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-sm">
+
+      <!-- honeypot -->
+      <label class="hidden">
+        <span>Leave this field empty</span>
+        <input type="text" name="hp_field" tabindex="-1" autocomplete="off">
+      </label>
+
+      <div class="grid md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm text-slate-600 mb-1">
+            <span class="lang-zh">姓名</span><span class="lang-ja">お名前</span><span class="lang-en">Name</span>
+          </label>
+          <input name="name" required class="w-full rounded-lg border-slate-300 focus:border-blue-500 focus:ring-blue-500" type="text" placeholder="">
+        </div>
+        <div>
+          <label class="block text-sm text-slate-600 mb-1">Email</label>
+          <input name="email" required class="w-full rounded-lg border-slate-300 focus:border-blue-500 focus:ring-blue-500" type="email" placeholder="name@company.com">
+        </div>
+
+        <div>
+          <label class="block text-sm text-slate-600 mb-1">
+            <span class="lang-zh">公司</span><span class="lang-ja">会社名</span><span class="lang-en">Company</span>
+          </label>
+          <input name="company" class="w-full rounded-lg border-slate-300 focus:border-blue-500 focus:ring-blue-500" type="text">
+        </div>
+        <div>
+          <label class="block text-sm text-slate-600 mb-1">
+            <span class="lang-zh">国家/地区</span><span class="lang-ja">国/地域</span><span class="lang-en">Country/Region</span>
+          </label>
+          <input name="country" class="w-full rounded-lg border-slate-300 focus:border-blue-500 focus:ring-blue-500" type="text">
+        </div>
+      </div>
+
+      <div class="mt-4">
+        <label class="block text-sm text-slate-600 mb-1">
+          <span class="lang-zh">需求描述</span><span class="lang-ja">ご要望</span><span class="lang-en">Message</span>
+        </label>
+        <textarea name="message" rows="5" required class="w-full rounded-lg border-slate-300 focus:border-blue-500 focus:ring-blue-500"></textarea>
+      </div>
+
+      <!-- Simple CAPTCHA -->
+      <div class="mt-4">
+        <label class="block text-sm text-slate-600 mb-1">
+          <span class="lang-zh">验证码</span><span class="lang-ja">認証コード</span><span class="lang-en">Verification</span>
+        </label>
+        <div class="flex items-center gap-3">
+          <span id="captchaQuestion" class="inline-flex items-center px-3 py-2 rounded-lg bg-slate-100 text-slate-700 text-sm"></span>
+          <input id="captchaInput" type="text" inputmode="numeric" autocomplete="off"
+                 class="w-28 rounded-lg border-slate-300 focus:border-blue-500 focus:ring-blue-500"
+                 placeholder="=?">
+          <button type="button" id="refreshCaptcha"
+                  class="text-sm px-3 py-2 rounded-lg border border-slate-200 hover:bg-slate-50">换一题 / Refresh</button>
+        </div>
+        <p class="mt-1 text-xs text-slate-500">
+          <span class="lang-zh">为纯静态站点准备的简单人机验证。</span>
+          <span class="lang-ja">静的サイト向けの簡易認証です。</span>
+          <span class="lang-en">Simple verification for static sites.</span>
+        </p>
+      </div>
+
+      <div class="mt-6">
+        <button id="submitBtn" type="submit" disabled
+                class="px-5 py-2.5 rounded-full bg-blue-600 text-white shadow hover:bg-blue-700 disabled:opacity-50">
+          <span class="lang-zh">发送</span><span class="lang-ja">送信</span><span class="lang-en">Send</span>
+        </button>
+      </div>
+
+      <!-- optional: email subject -->
+      <input type="hidden" name="_subject" value="New inquiry from lumishima.com">
+    </form>
   </div>
 </section>
+
+<script>
+(function(){
+  let a=0,b=0,ans=0;
+  const q = document.getElementById('captchaQuestion');
+  const i = document.getElementById('captchaInput');
+  const btn = document.getElementById('submitBtn');
+  const rf = document.getElementById('refreshCaptcha');
+  const hp = document.querySelector('[name="hp_field"]');
+
+  function gen(){
+    a = Math.floor(1 + Math.random()*8);
+    b = Math.floor(1 + Math.random()*8);
+    ans = a + b;
+    q.textContent = a + ' + ' + b + ' = ?';
+    i.value = '';
+    btn.disabled = true;
+  }
+  gen();
+
+  i.addEventListener('input', function(){
+    btn.disabled = (parseInt(i.value,10) !== ans);
+  });
+  rf.addEventListener('click', gen);
+
+  document.getElementById('contactForm').addEventListener('submit', function(e){
+    if (hp && hp.value) { e.preventDefault(); return; } // honeypot
+    if (parseInt(i.value,10) !== ans) {
+      e.preventDefault();
+      alert('验证码错误 / Invalid verification');
+    }
+  });
+})();
+</script>
